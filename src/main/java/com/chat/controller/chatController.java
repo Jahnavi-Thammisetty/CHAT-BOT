@@ -13,7 +13,6 @@ public class chatController {
     private ChatService chatService;
     @PostMapping(value = "/")
     public ChatDto chat(@RequestBody ChatDto chatDto){
-      
         return chatService.getChat(chatDto) ; 
     }
 }

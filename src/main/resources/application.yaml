@@ -1,5 +1,9 @@
 spring:
   application:
     name: CHAT-BOT
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/CHAT-BOT
+server:
+  port: 8202
     
-
