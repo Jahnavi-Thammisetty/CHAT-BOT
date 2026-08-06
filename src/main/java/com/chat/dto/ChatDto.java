@@ -17,4 +17,5 @@ public class ChatDto{
     private LocalDateTime createdAt;
     private Boolean isQuestion;
     private Boolean isAnswer;
+    private String userId;
 }

@@ -34,7 +34,7 @@ public class ChatService {
         chatDto.setId(UUID.randomUUID().toString());
         chatDto.setAiResponse(aiResponse);
         chatDto.setCreatedAt(LocalDateTime.now());
-
+        
         return chatDto;
     }
 }
