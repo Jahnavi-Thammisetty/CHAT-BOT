@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(value = "chat-document")
+@Document(value = "chat_documents")
 public class ChatDto{
     private String id;
     private String userMessage;
