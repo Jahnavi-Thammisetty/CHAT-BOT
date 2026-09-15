@@ -38,6 +38,7 @@ public class ChatService {
         chatDto.setAiResponse(aiResponse);
         chatDto.setCreatedAt(LocalDateTime.now());
         chatDto.setIsAnswer(true);
+        chatDto.setIsQuestion(false);
         chatData.saveChatData(chatDto);
         return chatDto;
     }

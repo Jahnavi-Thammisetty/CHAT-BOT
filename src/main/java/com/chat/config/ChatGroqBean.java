@@ -14,7 +14,7 @@ public class ChatGroqBean {
         return OpenAiChatModel.builder()
                 .baseUrl("https://api.groq.com/openai/v1")
 //                .apiKey()
-                .modelName("llama-3.3-70b-versatile")
+                .modelName("openai/gpt-oss-20b")
                 .build();
     }
 }

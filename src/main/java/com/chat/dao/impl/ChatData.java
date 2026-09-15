@@ -18,6 +18,6 @@ public class ChatData {
         return mongoUtilService.getMongoTemplate().save(chatData,MongoCollection.chat_documents.getCollectionName(chatData.getUserId()));
     }
     public List<ChatDto> getChatDetailsForUser(String userId){
-        return mongoUtilService.getMongoTemplate().find(Query.query(Criteria.where(userId)),ChatDto.class, MongoCollection.chat_documents.getCollectionName(userId));
+        return mongoUtilService.getMongoTemplate().find(Query.query(Criteria.where("userId").is(userId)),ChatDto.class, MongoCollection.chat_documents.getCollectionName(userId));
     }
 }
