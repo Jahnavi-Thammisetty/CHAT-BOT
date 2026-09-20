@@ -2,7 +2,6 @@ package com.chat.service;
 
 import com.chat.dao.impl.ChatData;
 import com.chat.dto.ChatDto;
-import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
@@ -39,8 +38,7 @@ public class ChatService {
         chatDto.setCreatedAt(LocalDateTime.now());
         chatDto.setIsAnswer(true);
         chatDto.setIsQuestion(false);
-        chatData.saveChatData(chatDto);
-        return chatDto;
+        return chatData.saveChatData(chatDto);
     }
     public List<ChatDto> getChatDetailsByUserId(String userId){
        return chatData.getChatDetailsForUser(userId);

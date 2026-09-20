@@ -6,4 +6,8 @@ spring:
       uri: mongodb://localhost:27017/CHAT-BOT
 server:
   port: 8202
+jwt:
+  secret : ammu-janu-ammu-this-is-my-secret-key-123456
+  access-token-expiration : 1800000
+  refresh-token-expiration : 604800000
     
