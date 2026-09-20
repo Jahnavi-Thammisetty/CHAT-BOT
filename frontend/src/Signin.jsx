@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
 
+
 function Signin() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -37,7 +38,12 @@ function Signin() {
             }
 
             console.log("Login successful:", data);
-            localStorage.setItem("Id", data.responseObject.id);  
+            localStorage.setItem("accessToken",data.responseObject.accessToken);
+
+            localStorage.setItem(
+                                    "refreshToken",
+                                    data.responseObject.refreshToken
+                                );
             // Navigate after successful login
             navigate("/chat");
 

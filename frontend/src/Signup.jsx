@@ -62,8 +62,8 @@ function Signup() {
             });
 
             // Navigate to signin after successful signup
-            setTimeout(() => {
-                navigate("/signin");
+           setTimeout(() => {
+                navigate("/login");
             }, 1000);
 
         } catch (err) {
@@ -148,7 +148,7 @@ function Signup() {
 
                 <p className="login-link">
                     Already have an account?{" "}
-                    <Link to="/signin">
+                    <Link to="/login">
                         Sign In
                     </Link>
                 </p>

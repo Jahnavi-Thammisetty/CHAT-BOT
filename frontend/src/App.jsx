@@ -7,40 +7,29 @@ import Chat from "./Chat";
 function App() {
     return (
         <BrowserRouter>
-
             <Routes>
 
-                {/* Default URL */}
                 <Route
                     path="/"
-                    element={
-                        <Navigate
-                            to="/signin"
-                            replace
-                        />
-                    }
+                    element={<Navigate to="/login" replace />}
                 />
 
-                {/* Sign In */}
                 <Route
-                    path="/signin"
+                    path="/login"
                     element={<Signin />}
                 />
 
-                {/* Sign Up */}
                 <Route
                     path="/signup"
                     element={<Signup />}
                 />
 
-                {/* Chat */}
                 <Route
                     path="/chat"
                     element={<Chat />}
                 />
 
             </Routes>
-
         </BrowserRouter>
     );
 }
